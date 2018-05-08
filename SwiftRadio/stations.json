@@ -2,11 +2,18 @@
     "station":
     [
      {
-     "name": "Absolute Country Hits",
-     "streamURL": "http://strm112.1.fm/acountry_mobile_mp3",
-     "imageURL": "station-absolutecountry.png",
-     "desc": "The Music Starts Here",
-     "longDesc": "All your favorite country hits and artists, from Johnny Cash to Taylor Swift, on 1.FM's Absolute Country, playing non-stop crooners and banjos, dance-tunes and fiddles, ballads and harmonicas. Absolute Country focuses on 5th, 6th and 7th generation Country (from the 90s on) but often delves into classic, older tunes as well."
+     "name": "KBIA 91.3 FM",
+     "streamURL": "http://playerservices.streamtheworld.com/pls/KBIAFMAAC_256.pls",
+     "imageURL": "station-kbia-hd1.png",
+     "desc": "NPR News, Talk and More",
+     "longDesc": "Columbia, Jefferson City and beyond."
+     },
+     {
+     "name": "KBIA 91.3 FM - HD 3",
+     "streamURL": "http://playerservices.streamtheworld.com/pls/KBIAHD3AAC.pls",
+     "imageURL": "station-kbia-hd3.png",
+     "desc": "Adult Alternative Radio for Central Missouri",
+     "longDesc": "Adult Alternative Radio for Central Missouri."
      },
      {
      "name": "Newport Folk Radio",
