@@ -16,7 +16,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Swift Radio-->
+        <!--Listen Live-->
         <scene sceneID="7ik-k3-I0U">
             <objects>
                 <viewController id="enP-TM-Wa7" customClass="StationsViewController" customModule="SwiftRadio" customModuleProvider="target" sceneMemberID="viewController">
@@ -138,7 +138,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rf9-Sj-GRF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Swift Radio" id="OKR-cw-CyI">
+                    <navigationItem key="navigationItem" title="Listen Live" id="OKR-cw-CyI">
                         <barButtonItem key="leftBarButtonItem" image="icon-hamburger" id="CEi-nw-1dN">
                             <connections>
                                 <segue destination="61j-j7-6ve" kind="modal" identifier="ShowMenu" id="MJP-ZO-92b"/>
@@ -792,6 +792,6 @@
         <image name="vol-min" width="11" height="12"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2md-Am-VN1"/>
+        <segue reference="Z22-bU-Ytg"/>
     </inferredMetricsTieBreakers>
 </document>
