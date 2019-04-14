@@ -284,7 +284,9 @@ class StationsViewController: UIViewController {
         var nowPlayingInfo = [String : Any]()
         
         if let image = track?.artworkImage {
-            nowPlayingInfo[MPMediaItemPropertyArtwork] = MPMediaItemArtwork(image: image)
+            nowPlayingInfo[MPMediaItemPropertyArtwork] = MPMediaItemArtwork(boundsSize: image.size, requestHandler: { size -> UIImage in
+                return image
+            })
         }
         
         if let artist = track?.artist {
@@ -487,7 +489,7 @@ extension StationsViewController: NowPlayingViewControllerDelegate {
         handleRemoteStationChange()
     }
     
-    private func handleRemoteStationChange() {
+    func handleRemoteStationChange() {
         if let nowPlayingVC = nowPlayingViewController {
             // If nowPlayingVC is presented
             nowPlayingVC.load(station: radioPlayer.station, track: radioPlayer.track)
