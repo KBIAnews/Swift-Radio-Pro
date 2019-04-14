@@ -727,11 +727,11 @@
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="67"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBf-Hj-mZ8">
-                                                <rect key="frame" x="111" y="0.0" width="160" height="33"/>
+                                                <rect key="frame" x="158" y="0.0" width="66" height="33"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="matthewfecher.com">
+                                                <state key="normal" title="kbia.org">
                                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -739,10 +739,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1G4-to-fqL">
-                                                <rect key="frame" x="160" y="37" width="62" height="30"/>
+                                                <rect key="frame" x="132.66666666666666" y="37" width="117" height="30"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="email me">
+                                                <state key="normal" title="email for support">
                                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -813,6 +813,6 @@
         <image name="vol-min" width="11" height="12.666666984558105"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Z22-bU-Ytg"/>
+        <segue reference="2md-Am-VN1"/>
     </inferredMetricsTieBreakers>
 </document>
