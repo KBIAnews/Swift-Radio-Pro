@@ -225,7 +225,7 @@ class NowPlayingViewController: UIViewController {
             message = "Station Stopped..."
         }
         
-        updateLabels(with: message, animate: animate)
+        updateLabels(with: message, animate: false)
         isPlayingDidChange(radioPlayer.isPlaying)
     }
     

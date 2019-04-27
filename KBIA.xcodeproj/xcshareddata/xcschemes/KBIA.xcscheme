@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9409E1151ABF6FEA00312E2B"
-               BuildableName = "SwiftRadio.app"
+               BuildableName = "KBIA.app"
                BlueprintName = "SwiftRadio"
                ReferencedContainer = "container:KBIA.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9409E1151ABF6FEA00312E2B"
-            BuildableName = "SwiftRadio.app"
+            BuildableName = "KBIA.app"
             BlueprintName = "SwiftRadio"
             ReferencedContainer = "container:KBIA.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9409E1151ABF6FEA00312E2B"
-            BuildableName = "SwiftRadio.app"
+            BuildableName = "KBIA.app"
             BlueprintName = "SwiftRadio"
             ReferencedContainer = "container:KBIA.xcodeproj">
          </BuildableReference>
@@ -85,7 +85,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9409E1151ABF6FEA00312E2B"
-            BuildableName = "SwiftRadio.app"
+            BuildableName = "KBIA.app"
             BlueprintName = "SwiftRadio"
             ReferencedContainer = "container:KBIA.xcodeproj">
          </BuildableReference>
@@ -96,6 +96,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "KBIA"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
