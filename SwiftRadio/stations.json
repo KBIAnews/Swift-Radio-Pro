@@ -6,7 +6,14 @@
      "streamURL": "http://playerservices.streamtheworld.com/pls/KBIAFMAAC_256.pls",
      "imageURL": "station-kbia-hd1.png",
      "desc": "NPR News, Talk and More",
-     "longDesc": "Columbia, Jefferson City and beyond."
+     "longDesc": "NPR News, Talk and More for Columbia, Jefferson City and beyond."
+     },
+     {
+         "name": "MU Classical 90.5 - KMUC",
+         "streamURL": "http://playerservices.streamtheworld.com/pls/KBIAHD2.pls",
+         "imageURL": "station-kbia-hd3.png",
+         "desc": "24-Hour Classical Music",
+         "longDesc": "Classical music for Columbia and beyond."
      },
      {
      "name": "KBIA 91.3 FM - HD 3",

@@ -386,6 +386,14 @@ open class FRadioPlayer: NSObject {
             return
         }
         
+        guard let stationURL = self.radioURL else {
+            return
+        }
+        
+        guard !stationURL.absoluteString.contains("KBIAFMAAC_256") else {
+            return
+        }
+        
         FRadioAPI.getArtwork(for: rawValue, size: artworkSize, completionHandler: { [unowned self] artworlURL in
             DispatchQueue.main.async {
                 self.delegate?.radioPlayer?(self, artworkDidChange: artworlURL)

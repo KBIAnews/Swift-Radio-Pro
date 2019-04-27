@@ -17,7 +17,7 @@
                BlueprintIdentifier = "9409E1151ABF6FEA00312E2B"
                BuildableName = "SwiftRadio.app"
                BlueprintName = "SwiftRadio"
-               ReferencedContainer = "container:SwiftRadio.xcodeproj">
+               ReferencedContainer = "container:KBIA.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "2C5545B91C1124DE00728469"
                BuildableName = "SwiftRadioUITests.xctest"
                BlueprintName = "SwiftRadioUITests"
-               ReferencedContainer = "container:SwiftRadio.xcodeproj">
+               ReferencedContainer = "container:KBIA.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "9409E1151ABF6FEA00312E2B"
             BuildableName = "SwiftRadio.app"
             BlueprintName = "SwiftRadio"
-            ReferencedContainer = "container:SwiftRadio.xcodeproj">
+            ReferencedContainer = "container:KBIA.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -68,7 +68,7 @@
             BlueprintIdentifier = "9409E1151ABF6FEA00312E2B"
             BuildableName = "SwiftRadio.app"
             BlueprintName = "SwiftRadio"
-            ReferencedContainer = "container:SwiftRadio.xcodeproj">
+            ReferencedContainer = "container:KBIA.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -87,7 +87,7 @@
             BlueprintIdentifier = "9409E1151ABF6FEA00312E2B"
             BuildableName = "SwiftRadio.app"
             BlueprintName = "SwiftRadio"
-            ReferencedContainer = "container:SwiftRadio.xcodeproj">
+            ReferencedContainer = "container:KBIA.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

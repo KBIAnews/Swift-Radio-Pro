@@ -33,6 +33,7 @@
 	<string>This app would like to save the image associated with the current track and station to your photo library.</string>
 	<key>NSUserActivityTypes</key>
 	<array>
+		<string>INPlayMediaIntent</string>
 		<string>NSUserActivityTypeBrowsingWeb</string>
 	</array>
 	<key>UIBackgroundModes</key>
