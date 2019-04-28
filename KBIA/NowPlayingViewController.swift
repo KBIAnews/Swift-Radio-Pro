@@ -41,7 +41,7 @@ class NowPlayingViewController: UIViewController {
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var airPlayView: UIView!
-    
+
     // MARK: - Properties
     
     var currentStation: RadioStation!
@@ -137,7 +137,8 @@ class NowPlayingViewController: UIViewController {
         albumImageView.image = currentTrack.artworkImage
         stationDescLabel.text = currentStation.desc
         stationDescLabel.isHidden = currentTrack.artworkLoaded
-        title = currentStation.name
+//        title = currentStation.name
+        title = "Now Playing"
     }
     
     //*****************************************************************
