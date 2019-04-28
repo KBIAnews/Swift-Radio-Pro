@@ -39,6 +39,8 @@
 		81AD229B21646DEA002ADFDD /* FRadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AD229821646DEA002ADFDD /* FRadioPlayer.swift */; };
 		81AD229C21646DEA002ADFDD /* FRadioAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AD229921646DEA002ADFDD /* FRadioAPI.swift */; };
 		81AD229D21646DEA002ADFDD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AD229A21646DEA002ADFDD /* Reachability.swift */; };
+		9095CC8922760ABC008116FC /* AirPlayButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9095CC8822760ABC008116FC /* AirPlayButtonViewController.swift */; };
+		9095CC8C22760CE0008116FC /* AirPlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9095CC8B22760CE0008116FC /* AirPlayButtonView.swift */; };
 		90BC5CBA2274E97D00B28C8F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90BC5CB92274E97D00B28C8F /* Colors.xcassets */; };
 		9409E11C1ABF6FEA00312E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9409E11B1ABF6FEA00312E2B /* AppDelegate.swift */; };
 		9409E1261ABF6FEA00312E2B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9409E1251ABF6FEA00312E2B /* Images.xcassets */; };
@@ -109,6 +111,8 @@
 		81AD229821646DEA002ADFDD /* FRadioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRadioPlayer.swift; sourceTree = "<group>"; };
 		81AD229921646DEA002ADFDD /* FRadioAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRadioAPI.swift; sourceTree = "<group>"; };
 		81AD229A21646DEA002ADFDD /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		9095CC8822760ABC008116FC /* AirPlayButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirPlayButtonViewController.swift; sourceTree = "<group>"; };
+		9095CC8B22760CE0008116FC /* AirPlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirPlayButtonView.swift; sourceTree = "<group>"; };
 		90BC5CB92274E97D00B28C8F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = KBIA/Colors.xcassets; sourceTree = "<group>"; };
 		9409E1161ABF6FEA00312E2B /* KBIA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KBIA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9409E11A1ABF6FEA00312E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -206,6 +210,14 @@
 			path = Spring;
 			sourceTree = "<group>";
 		};
+		9095CC8A22760CCF008116FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9095CC8B22760CE0008116FC /* AirPlayButtonView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		9409E10D1ABF6FE900312E2B = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +240,7 @@
 		9409E1181ABF6FEA00312E2B /* KBIA */ = {
 			isa = PBXGroup;
 			children = (
+				9095CC8A22760CCF008116FC /* Views */,
 				94D2608F1B45D11800DE671C /* Cells */,
 				94AC70AF1AD05C7400652982 /* Networking */,
 				94823F861B5576F4004EC711 /* Data */,
@@ -278,6 +291,7 @@
 				94452E4E1AD6F24700BFE7A5 /* PopUpMenuViewController.swift */,
 				9409E13F1ABF78B000312E2B /* NowPlayingViewController.swift */,
 				942A3F361AE43DF80011396E /* StationsViewController.swift */,
+				9095CC8822760ABC008116FC /* AirPlayButtonViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -461,6 +475,7 @@
 				5F22BA4E1F72AD5A00CB5911 /* Misc.swift in Sources */,
 				5F22BA441F72AD5A00CB5911 /* SpringButton.swift in Sources */,
 				5F22BA561F72AD5A00CB5911 /* DesignableView.swift in Sources */,
+				9095CC8C22760CE0008116FC /* AirPlayButtonView.swift in Sources */,
 				5F22BA521F72AD5A00CB5911 /* UnwindSegue.swift in Sources */,
 				94E9761C1B1A8F3200F52B1E /* UIImage+DropShadow.swift in Sources */,
 				81AD229D21646DEA002ADFDD /* Reachability.swift in Sources */,
@@ -477,6 +492,7 @@
 				5F22BA4D1F72AD5A00CB5911 /* DesignableImageView.swift in Sources */,
 				5F22BA491F72AD5A00CB5911 /* AsyncImageView.swift in Sources */,
 				5F22BA541F72AD5A00CB5911 /* SpringView.swift in Sources */,
+				9095CC8922760ABC008116FC /* AirPlayButtonViewController.swift in Sources */,
 				94D260961B45E3FA00DE671C /* AnimationFrames.swift in Sources */,
 				5F22BA461F72AD5A00CB5911 /* AsyncButton.swift in Sources */,
 				942A3F371AE43DF80011396E /* StationsViewController.swift in Sources */,

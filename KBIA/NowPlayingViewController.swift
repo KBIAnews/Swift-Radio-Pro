@@ -77,11 +77,6 @@ class NowPlayingViewController: UIViewController {
         // Check for station change
         newStation ? stationDidChange() : playerStateDidChange(radioPlayer.state, animate: false)
         
-        // Setup volumeSlider
-        setupVolumeSlider()
-        
-        // Setup AirPlayButton
-        setupAirPlayButton()
         
         // Hide / Show Next/Previous buttons
         previousButton.isHidden = hideNextPreviousButtons
@@ -92,45 +87,7 @@ class NowPlayingViewController: UIViewController {
     // MARK: - Setup
     //*****************************************************************
     
-    func setupVolumeSlider() {
-        // Note: This slider implementation uses a MPVolumeView
-        // The volume slider only works in devices, not the simulator.
-        for subview in MPVolumeView().subviews {
-            guard let volumeSlider = subview as? UISlider else { continue }
-            mpVolumeSlider = volumeSlider
-        }
-        
-        guard let mpVolumeSlider = mpVolumeSlider else { return }
-        
-        volumeParentView.addSubview(mpVolumeSlider)
-        
-        mpVolumeSlider.translatesAutoresizingMaskIntoConstraints = false
-        mpVolumeSlider.leftAnchor.constraint(equalTo: volumeParentView.leftAnchor).isActive = true
-        mpVolumeSlider.rightAnchor.constraint(equalTo: volumeParentView.rightAnchor).isActive = true
-        mpVolumeSlider.centerYAnchor.constraint(equalTo: volumeParentView.centerYAnchor).isActive = true
-        
-        mpVolumeSlider.setThumbImage(#imageLiteral(resourceName: "slider-ball"), for: .normal)
-    }
     
-    func setupAirPlayButton() {
-        guard !hideAirPlayButton else {
-            airPlayView.isHidden = true
-            return
-        }
-
-        if #available(iOS 11.0, *) {
-            let airPlayButton = AVRoutePickerView(frame: airPlayView.bounds)
-            airPlayButton.activeTintColor = globalTintColor
-            airPlayButton.tintColor = .gray
-            airPlayView.backgroundColor = .clear
-            airPlayView.addSubview(airPlayButton)
-        } else {
-            let airPlayButton = MPVolumeView(frame: airPlayView.bounds)
-            airPlayButton.showsVolumeSlider = false
-            airPlayView.backgroundColor = .clear
-            airPlayView.addSubview(airPlayButton)
-        }
-    }
     
     func stationDidChange() {
         radioPlayer.radioURL = URL(string: currentStation.streamURL)
