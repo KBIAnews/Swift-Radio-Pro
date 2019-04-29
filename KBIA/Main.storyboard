@@ -41,16 +41,16 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="g0b-Y4-SBe" userLabel="Labels Stack View">
-                                                    <rect key="frame" x="136" y="22.333333333333332" width="255" height="46.333333333333343"/>
+                                                    <rect key="frame" x="136" y="22.333333333333332" width="216" height="46.333333333333343"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Station Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hQQ-6f-sYl">
-                                                            <rect key="frame" x="0.0" y="0.0" width="255" height="20.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="216" height="20.333333333333332"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptr-mN-34N">
-                                                            <rect key="frame" x="0.0" y="28.333333333333329" width="255" height="18"/>
+                                                            <rect key="frame" x="0.0" y="28.333333333333329" width="216" height="18"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -173,7 +173,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="v3V-gx-jZN">
-                                <rect key="frame" x="37.666666666666657" y="287" width="300" height="136.33333333333337"/>
+                                <rect key="frame" x="37.666666666666657" y="287" width="300" height="221.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="8xJ-4F-WCE" userLabel="Labels Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="61.333333333333336"/>
@@ -197,14 +197,26 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JY6-d6-Lml" customClass="SwiftSiriWaveformView" customModule="SwiftSiriWaveformView">
+                                        <rect key="frame" x="0.0" y="66.333333333333314" width="300" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="3gv-Vg-R6d"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="waveColor">
+                                                <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UrU-bm-liu">
-                                        <rect key="frame" x="0.0" y="66.333333333333314" width="300" height="20"/>
+                                        <rect key="frame" x="0.0" y="151.33333333333337" width="300" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="sVV-fp-ACg"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="WmY-ug-Nhz" userLabel="Controls Stack View">
-                                        <rect key="frame" x="0.0" y="91.333333333333371" width="300" height="45"/>
+                                        <rect key="frame" x="0.0" y="176.33333333333337" width="300" height="45"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKm-n9-BaN">
                                                 <rect key="frame" x="0.0" y="0.0" width="57" height="45"/>
@@ -291,6 +303,8 @@
                                     <constraint firstItem="WmY-ug-Nhz" firstAttribute="width" secondItem="v3V-gx-jZN" secondAttribute="width" id="B7Q-0k-XDH"/>
                                     <constraint firstItem="UrU-bm-liu" firstAttribute="centerX" secondItem="v3V-gx-jZN" secondAttribute="centerX" id="NlP-bI-mjE"/>
                                     <constraint firstItem="UrU-bm-liu" firstAttribute="width" secondItem="v3V-gx-jZN" secondAttribute="width" id="eSX-4s-WGF"/>
+                                    <constraint firstItem="JY6-d6-Lml" firstAttribute="centerX" secondItem="v3V-gx-jZN" secondAttribute="centerX" id="lNj-yy-Ya8"/>
+                                    <constraint firstItem="JY6-d6-Lml" firstAttribute="width" secondItem="v3V-gx-jZN" secondAttribute="width" id="nIa-Md-gLt"/>
                                     <constraint firstItem="8xJ-4F-WCE" firstAttribute="centerX" secondItem="v3V-gx-jZN" secondAttribute="centerX" id="s7d-2p-eo8"/>
                                     <constraint firstItem="8xJ-4F-WCE" firstAttribute="width" secondItem="v3V-gx-jZN" secondAttribute="width" id="wyn-nw-Btg"/>
                                 </constraints>
@@ -381,6 +395,7 @@
                         <outlet property="nextButton" destination="rdn-tm-QKv" id="VHQ-xc-bpl"/>
                         <outlet property="playingButton" destination="k7t-tN-2wp" id="ZOi-KR-veF"/>
                         <outlet property="previousButton" destination="W6n-gy-z3a" id="bKE-rg-HPb"/>
+                        <outlet property="siriStyleWaveform" destination="JY6-d6-Lml" id="YB3-Tc-SQF"/>
                         <outlet property="songLabel" destination="KC8-ZG-rx5" id="tNh-3K-qWW"/>
                         <outlet property="stationDescLabel" destination="RA9-OX-Xr1" id="uAM-NB-RRM"/>
                         <segue destination="bg5-7y-kdG" kind="show" identifier="InfoDetail" id="6y5-wi-W3s"/>

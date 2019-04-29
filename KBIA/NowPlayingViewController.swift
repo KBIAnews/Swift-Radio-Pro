@@ -9,7 +9,7 @@
 import UIKit
 import MediaPlayer
 import AVKit
-
+import SwiftSiriWaveformView
 
 //*****************************************************************
 // NowPlayingViewControllerDelegate
@@ -41,7 +41,8 @@ class NowPlayingViewController: UIViewController {
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var airPlayView: UIView!
-
+    @IBOutlet weak var siriStyleWaveform: SwiftSiriWaveformView!
+    
     // MARK: - Properties
     
     var currentStation: RadioStation!
@@ -52,6 +53,16 @@ class NowPlayingViewController: UIViewController {
     let radioPlayer = FRadioPlayer.shared
     
     var mpVolumeSlider: UISlider?
+    
+    // Siri Wave Properties
+    var timer:Timer?
+    var rateOfSiriWaveChange:CGFloat = 0.0004
+    let siriChangeAmplitudeCeilingPlaying:CGFloat = 0.6
+    let siriChangeAmplitudeCeilingStopped:CGFloat = 0.1
+    var siriChangeAmplitudeCeiling:CGFloat = 0.05
+    let siriChangeAmplitudeFloorPlaying:CGFloat = 0.4
+    let siriChangeAmplitudeFloorStopped:CGFloat = 0.06
+    var siriChangeAmplitudeFloor:CGFloat = 0.06
 
     //*****************************************************************
     // MARK: - ViewDidLoad
@@ -67,7 +78,8 @@ class NowPlayingViewController: UIViewController {
         optimizeForDeviceSize()
 
         // Set View Title
-        self.title = currentStation.name
+        //self.title = currentStation.name
+        self.title = "Now Playing"
         
         // Set UI
         albumImageView.image = currentTrack.artworkImage
@@ -81,6 +93,12 @@ class NowPlayingViewController: UIViewController {
         // Hide / Show Next/Previous buttons
         previousButton.isHidden = hideNextPreviousButtons
         nextButton.isHidden = hideNextPreviousButtons
+        
+        // Change background to transparent on Siri Waveform
+        siriStyleWaveform.backgroundColor = .clear
+        
+        // Setup Siri Waveform Timer
+        timer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(self.refreshAudioView(_:)), userInfo: nil, repeats: true)
     }
     
     //*****************************************************************
@@ -177,10 +195,25 @@ class NowPlayingViewController: UIViewController {
         switch playbackState {
         case .paused:
             message = "Station Paused..."
+            // Tear Down Siri-style waveform
+            siriChangeAmplitudeCeiling = siriChangeAmplitudeCeilingStopped
+            siriChangeAmplitudeFloor = siriChangeAmplitudeFloorStopped
+            siriStyleWaveform.amplitude = siriChangeAmplitudeFloor
+            siriStyleWaveform.waveColor = .darkGray
         case .playing:
             message = nil
+            // Set Up Siri-style waveform
+            siriChangeAmplitudeFloor = siriChangeAmplitudeFloorPlaying
+            siriChangeAmplitudeCeiling = siriChangeAmplitudeCeilingPlaying
+            siriStyleWaveform.amplitude = siriChangeAmplitudeFloor
+            siriStyleWaveform.waveColor = .white
         case .stopped:
             message = "Station Stopped..."
+            // Tear Down Siri-style waveform
+            siriChangeAmplitudeCeiling = siriChangeAmplitudeCeilingStopped
+            siriChangeAmplitudeFloor = siriChangeAmplitudeFloorStopped
+            siriStyleWaveform.amplitude = siriChangeAmplitudeFloor
+            siriStyleWaveform.waveColor = .darkGray
         }
         
         updateLabels(with: message, animate: false)
@@ -265,6 +298,19 @@ class NowPlayingViewController: UIViewController {
         songLabel.animate()
     }
     
+    @objc internal func refreshAudioView(_:Timer) {
+        if self.siriStyleWaveform.amplitude <= self.siriStyleWaveform.idleAmplitude || self.siriStyleWaveform.amplitude > self.siriChangeAmplitudeCeiling {
+            self.rateOfSiriWaveChange *= -1
+        }
+        
+        if self.siriStyleWaveform.amplitude < self.siriChangeAmplitudeFloor {
+            self.rateOfSiriWaveChange *= -1
+        }
+        
+        // Simply set the amplitude to whatever you need and the view will update itself.
+        self.siriStyleWaveform.amplitude += self.rateOfSiriWaveChange
+    }
+    
     func createNowPlayingAnimation() {
         
         // Setup ImageView
@@ -284,6 +330,7 @@ class NowPlayingViewController: UIViewController {
         
         let barItem = UIBarButtonItem(customView: barButton)
         self.navigationItem.rightBarButtonItem = barItem
+        
     }
     
     func startNowPlayingAnimation(_ animate: Bool) {
